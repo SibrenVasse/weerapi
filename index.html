@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Weerapi by erikr</title>
+    <title>WeerAPI by erikr</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,7 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Weerapi</h1>
+        <h1>WeerAPI</h1>
         <p>A basic KNMI weather API</p>
 
         <p class="view"><a href="https://github.com/erikr/weerapi">View the Project on GitHub <small>erikr/weerapi</small></a></p>
@@ -29,13 +29,15 @@
       </header>
       <section>
         <h1>
-<a name="weerapi-a-basic-knmi-weather-api" class="anchor" href="#weerapi-a-basic-knmi-weather-api"><span class="octicon octicon-link"></span></a>weerapi: A basic KNMI weather API</h1>
+<a name="weerapi-a-basic-knmi-weather-api" class="anchor" href="#weerapi-a-basic-knmi-weather-api"><span class="octicon octicon-link"></span></a>WeerAPI: A basic KNMI weather API</h1>
 
 <p>This is a very basic JSON API for very basic weather data from the
 <a href="http://www.knmi.nl/index_en.html">Royal Netherlands Meteorological Institute</a>.</p>
 
-<p>The KNMI offers no simple API for simple data, so I built this one, based on scraping their website.
-Currently, it only offers a single API call, for the latest weather observations at 36 monitoring stations.</p>
+<p>The KNMI offers no simple API for simple data, so I built this one, which scrapes their website.
+Currently, it only offers a single API call, for the
+<a href="http://www.knmi.nl/actueel/">latest weather observations</a>
+at 36 monitoring stations.</p>
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
@@ -47,7 +49,7 @@ Currently, it only offers a single API call, for the latest weather observations
 <ul>
 <li>Temperatuur is in degrees celcius</li>
 <li>Humidity is a percentage</li>
-<li>Wind speed is in m/s</li>
+<li>Wind speed is in m/s and Beaufort</li>
 <li>Visibility is in meters</li>
 <li>Pressure is in hPa</li>
 </ul><h2>
@@ -55,8 +57,8 @@ Currently, it only offers a single API call, for the latest weather observations
 
 <ul>
 <li>The data is cached for two minutes. The KNMI refreshes this data every ten minutes.</li>
-<li>The geographical coordinates of the measuring stations are quite rough. If you can provide better ones,
-create an issue or a pull request.</li>
+<li>The geographical coordinates of the measuring stations are very rough. If you can provide better ones,
+<a href="https://github.com/erikr/weerapi/issues/new">create an issue</a> or a pull request.</li>
 <li>Please attribute KNMI as a source if you use this.</li>
 </ul>
       </section>
