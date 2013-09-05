@@ -1,13 +1,19 @@
 import memcache
 import requests
 import json
-from flask import Flask, Response
+from flask import Flask, Response, redirect
 
 from weerapi.knmidata import KNMIData
 from weerapi.config import MEMCACHE_KEY, MEMCACHE_SERVERS, MEMCACHE_EXPIRY, URL
 
 app = Flask(__name__)
 mc = memcache.Client(MEMCACHE_SERVERS, debug=0)
+
+
+@app.route('/')
+def home():
+    return redirect("http://erikr.github.io/weerapi/")
+
 
 @app.route("/actueel/")
 def actueel():
