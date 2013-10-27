@@ -1,5 +1,5 @@
 from BeautifulSoup import BeautifulSoup
-from collections import OrderedDict
+from ordereddict import OrderedDict
 from decimal import Decimal
 
 
@@ -15,7 +15,11 @@ class KNMIData(object):
                 continue
 
             fields = self.clean_fields(fields)
-            (name, weather_type, temperature, humidity, wind_direction, wind_speed_ms, visibility, pressure) = fields
+            wind_chill = None
+            if len(fields) == 8:
+            	(name, weather_type, temperature, humidity, wind_direction, wind_speed_ms, visibility, pressure) = fields
+            else:
+            	(name, weather_type, temperature, wind_chill, humidity, wind_direction, wind_speed_ms, visibility, pressure) = fields
 
             if name and name in LOCATION_MAPPING:
                 (latitude, longitude) = LOCATION_MAPPING[name]
@@ -38,6 +42,7 @@ class KNMIData(object):
                 'wind_direction': wind_direction,
                 'weather_type': weather_type,
                 'temperature': temperature,
+                'wind_chill': wind_chill,
                 'humidity': humidity,
                 'wind_speed_ms': wind_speed_ms,
                 'wind_speed_bft': wind_speed_bft,
