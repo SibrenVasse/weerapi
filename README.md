@@ -1,4 +1,4 @@
-# weerapi: A basic KNMI weather API
+# WeerAPI: A basic KNMI weather API
 
 This is a very basic JSON API for very basic weather data from the
 [Royal Netherlands Meteorological Institute](http://www.knmi.nl/index_en.html).
