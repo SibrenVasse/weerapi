@@ -2,3 +2,4 @@ BeautifulSoup==3.2.1
 Flask==0.10.1
 python-memcached==1.53
 requests==1.2.3
+ordereddict==1.1
